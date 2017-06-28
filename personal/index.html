@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>personal</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/chocolat.css" rel="stylesheet" charset="utf-8">
+
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/modernizr.custom.97074.js"></script>
+    <script src="js/jquery.hoverdir.js"></script>
+
+    <script src="js/banner.js"></script>
+    <script src="js/circle.js"></script>
+    <script>
+        $(function () {
+            //跳转到指定区域
+            $(".banner .scroll").click(function () {
+                $("html, body").animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+
+            //鼠标悬停在作品集图片上的动画效果
+            console.log($(".thumbs > li"));
+            $(".thumbs > li").each(function () {
+                $(this).hoverdir();
+            })
+
+            //回到顶部
+            $(window).scroll(function (ev) {
+                if ($(this).scrollTop() > 600) {
+                    $("#toTop").show();
+                } else {
+                    $("#toTop").hide();
+                }
+            });
+            $("#toTop").click(function () {
+                $("html, body").animate({scrollTop: 0}, 1000);
+            });
+        })
+    </script>
+</head>
+<body>
+
+<!-- banner -->
+<div class="banner" id="home">
+    <div class="inner banner-grids">
+        <div class="nav">
+            <h2>龙新</h2>
+            <ul class="nav-list">
+                <li><a href="#home" class="scroll">Hello</a></li>
+                <li><a href="#about" class="scroll">关于我</a></li>
+                <li><a href="#portfolio" class="scroll">作品集</a></li>
+                <li><a href="#services" class="scroll">专业技能</a></li>
+                <li><a href="#contact" class="scroll">联系方式</a></li>
+            </ul>
+        </div>
+        <!-- pic -->
+        <div class="slide"></div>
+    </div>
+</div>
+<!-- about -->
+<div class="about" id="about">
+    <div class="inner">
+        <div class="about-info">
+            <h3>关于我</h3>
+            <h4>为什么想做前端</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="about-grids">
+            <div class="about-grid">
+                <div class="about-grid-in">
+                    <h4>我的前端项目经验</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-grid-in">
+                    <h4>我的目标</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!-- skills -->
+<div class="my-skills">
+    <div class="inner">
+        <div class="skill-info">
+            <h3>我的技能</h3>
+        </div>
+        <div class="skill-grids">
+            <div class="skill-grid">
+                <div class="skill-grid-in">
+                    <canvas class="circle" id="circle-1" width="160px" height="160px"></canvas>
+                    <p>Web Design</p>
+                </div>
+            </div>
+            <div class="skill-grid">
+                <div class="skill-grid-in">
+                    <canvas class="circle" id="circle-2" width="160px" height="160px"></canvas>
+                    <p>HTML/CSS</p>
+                </div>
+            </div>
+            <div class="skill-grid">
+                <div class="skill-grid-in">
+                    <canvas class="circle" id="circle-3" width="160px" height="160px"></canvas>
+                    <p>JavaScript</p>
+                </div>
+            </div>
+            <div class="skill-grid">
+                <div class="skill-grid-in">
+                    <canvas class="circle" id="circle-4" width="160px" height="160px"></canvas>
+                    <p>Node.Js</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!-- portfolio -->
+<div class="portfolio" id="portfolio">
+    <div class="inner">
+
+        <h3>作品集</h3>
+        <ul class="thumbs">
+            <li>
+                <a href="portfolio/spectral/index.html" class="" target="_blank">
+                    <img src="images/a1.jpg" alt="">
+                    <div>
+                        <h5>Html5 up 响应式页面</h5>
+                        <p>参照html5 up上一个作品,使用Css3实现动画效果,采用BootStrap的栅格布局和自定义媒体查询实现页面的响应式效果</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="portfolio/JD/index.html" class="" target="_blank">
+                    <img src="images/a2.jpg" alt="">
+                    <div>
+                        <h5>仿京东首页+详情页</h5>
+                        <p>严格按照京东首页PSD文件的结构与样式进行网页布局，实现首页的每一个购物楼层、头部、底部、商品详情页等等。</p>
+                        <p>使用原生js、jquery实现搜索框提示、左侧分类航栏的切换，banner图的自动播放，通过判断页面滚动高度实现左侧楼层导航的显示、切换和跳转等交互效果</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="portfolio/awesome/index.html" class="" target="_blank">
+                    <img src="images/a3.jpg" alt="">
+                    <div>
+                        <h5>暖色调的响应式页面</h5>
+                        <p>主要采用bootstrap栅格布局实现页面响应式效果,组件实现自定义轮播效果,javascript实现导航栏的延迟页面跳转,slide区域的选项切换</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="portfolio/snake/snake2.html" class="" target="_blank">
+                    <img src="images/a4.jpg" alt="">
+                    <div>
+                        <h5>贪吃蛇小Demo</h5>
+                        <p>使用canvas+原生Javascript绘制的贪吃蛇小游戏</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="images/a5.jpg" class="">
+                    <img src="images/a5.jpg" alt="">
+                    <div>
+                        <h5>VIEW</h5>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="images/a6.jpg" class="">
+                    <img src="images/a6.jpg" alt="">
+                    <div>
+                        <h5>VIEW</h5>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="images/a7.jpg" class="">
+                    <img src="images/a7.jpg" alt="">
+                    <div>
+                        <h5>VIEW</h5>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="images/a8.jpg" class="">
+                    <img src="images/a8.jpg" alt="">
+                    <div>
+                        <h5>VIEW</h5>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="images/a1.jpg" class="">
+                    <img src="images/a1.jpg" alt="">
+                    <div>
+                        <h5>VIEW</h5>
+                    </div>
+                </a>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+<!-- services -->
+<div class="services" id="services">
+    <div class="inner">
+        <div class="ser-head">
+            <h3>主要专业技能</h3>
+        </div>
+        <div class="ser-grids">
+            <div class="ser-grid">
+                <div class="ser-grid-in btm-clr">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <h3>计算机语言</h3>
+                    <p>熟悉HTML、CSS、JavaScript, 对后端语言Java、PHP有一定了解</p>
+                </div>
+            </div>
+            <div class="ser-grid">
+                <div class="ser-grid-in btm-clr">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-globe"></span>
+                    </div>
+                    <h3>前端框架与库</h3>
+                    <p>熟悉Vue.Js、Jquery、Bootstrap等框架的使用</p>
+                </div>
+            </div>
+            <div class="ser-grid">
+                <div class="ser-grid-in btm-clr">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                    </div>
+                    <h3>Html5/Css3 原生JS</h3>
+                    <p>熟悉HTML5/CSS3等相关技术, 能用原生JS编写程序</p>
+                </div>
+            </div>
+            <div class="ser-grid">
+                <div class="ser-grid-in btm-clr">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                    </div>
+                    <h3>WEB</h3>
+                    <p>熟悉Ajax、Canvas等前端开发技术，熟悉W3C标准</p>
+                </div>
+            </div>
+            <div class="ser-grid">
+                <div class="ser-grid-in btm-clr">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-cog"></span>
+                    </div>
+                    <h3>交互</h3>
+                    <p>使用JavaScript、jquery实现网页各种交互效果</p>
+                </div>
+            </div>
+            <div class="ser-grid">
+                <div class="ser-grid-in btm-clr">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </div>
+                    <h3>移动端</h3>
+                    <p>熟悉响应式页面/手机端页面的开发</p>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!-- contact -->
+<div class="contact" id="contact">
+    <div class="inner">
+        <div class="contact-grids">
+            <div class="contact-grid">
+                <div class="contact-grid-in">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                    </div>
+                    <p>中国 重庆</p>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-grid-in">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </div>
+                    <p><a href="##">806952601@qq.com</a></p>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-grid-in">
+                    <div class="icon">
+                        <span class="glyphicon glyphicon-earphone"></span>
+                    </div>
+                    <p>13983932527</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="inner">
+            <div class="contact-info">
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="text" placeholder="Your E-Mail" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <input type="submit" value="SEND MESSAGE">
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- footer -->
+<div class="footer">
+    <div class="inner">
+        <p> © 2017 LX. Made By Rain Day | Design by  <a href="##"> W3layouts</a></p>
+    </div>
+</div>
+<!-- footer end -->
+<a href="#" id="toTop"></a>
+</body>
+</html>

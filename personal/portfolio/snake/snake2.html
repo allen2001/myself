@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>game</title>
+	<style type="text/css">
+	.over {text-align: center; width: 100px; background-color: #eee; position: absolute; top: 250px; left: 260px; border-radius: 8px; display: none;}
+	.over button {border: none; outline: none; padding: 3px 8px; margin-bottom: 10px; cursor: pointer;}
+	</style>
+</head>
+<body>
+<canvas id="cvs" width="800" height="800"></canvas>
+<div class="over">
+	<h4>GAME OVER!</h4>
+	<button id="ok">OK</button>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+	//del
+	var oBtn = document.getElementById("ok");
+	oBtn.onclick = function () {
+		this.parentNode.style.display = "none";
+	}
+
+	var cvs = document.getElementById("cvs");
+	var ctx = cvs.getContext("2d");
+	var w = 20;
+	var snake = [
+		{x: 10, y: 10},
+		{x: 10, y: 11},
+		{x: 10, y: 12}
+	];		//蛇的初始位置	长度	
+	
+	var food = [
+
+	];
+
+	var state = 0;	//方向
+	timer = null;
+	
+	init();		//绘制网格
+	drawSnake();		//画蛇
+	initFood();			//页面刷新时添加食物
+
+	function init() {
+		for (var i = 0; i < 30; i++) {
+			for (var j = 0; j < 30; j++) {
+				ctx.strokeRect(j * w, i * w, w, w);
+			}		
+		}		
+	};
+	
+	function drawSnake() {
+		ctx.fillStyle = "#666";
+		for (var i = 0; i < snake.length; i++) {
+			ctx.fillRect(snake[i].x * w, snake[i].y * w, w, w);
+		}
+	};
+	
+	function initFood() {
+		ctx.fillStyle = "orange";
+		for (var i = 0; i < 5; i++) {
+			var ranX = Math.floor(Math.random() * 30)			//0-29
+			var ranY = Math.floor(Math.random() * 30)			//0-29
+			food.push({x: ranX, y: ranY});
+			ctx.fillRect(food[i].x * w, food[i].y * w, w, w)
+		}
+	}
+
+	function drawFood() {
+		ctx.fillStyle = "orange";
+		for (var i = 0; i < food.length; i++) {
+			ctx.fillRect(food[i].x * w, food[i].y * w, w, w);
+		}		
+	}
+
+	function move() {
+
+		for (var i = snake.length - 1; i > 0; i--) {
+			snake[i].x = snake[i-1].x;
+			snake[i].y = snake[i-1].y;
+		}
+
+		//snake[0].y--;
+		switch (state) {
+			case 0:
+			snake[0].y--;
+			break;
+			case 1:
+			snake[0].y++;
+			break;
+			case 2:
+			snake[0].x--;
+			break;
+			case 3:
+			snake[0].x++;
+			break;
+			default:
+			break;									
+		}
+
+/*		if (snake[0].x < 0 || snake[0].x > 29 || snake[0].y < 0 || snake[0].y > 29) {
+			clearInterval(timer);
+			alert("GAME OVER!!!");
+			return;
+		}*/
+
+		if (snake[0].x < 0) {
+			snake[0].x = 29;
+		} else if (snake[0].x > 29) {
+			snake[0].x = 0;
+		} else if (snake[0].y < 0) {
+			snake[0].y = 29;
+		} else if (snake[0].y > 29) {
+			snake[0].y = 0
+		}		//考虑边界
+
+		for (var k = 1; k < snake.length; k++) {
+			if (snake[0].x == snake[k].x && snake[0].y == snake[k].y) {
+				oBtn.parentNode.style.display = "block";
+				clearInterval(timer);
+				return;
+			}
+		}
+
+		for (var j = 0; j < food.length; j++) {
+			if (snake[0].x == food[j].x && snake[0].y == food[j].y) {
+				snake.push({x: food[j].x, y: food[j].y});
+				food.splice(j, 1);
+				var ranX = Math.floor(Math.random() * 30)			//0-29
+				var ranY = Math.floor(Math.random() * 30)			//0-29
+				food.push({x: ranX, y: ranY});				
+			}
+		}
+
+	};
+
+	function play() {
+		ctx.clearRect(0, 0, cvs.width, cvs.height);
+		init();
+		move();
+		drawSnake();
+		drawFood();
+
+	};
+	//play();
+	timer = setInterval(play, 130);
+
+	window.onkeydown = function (ev) {
+		//console.log(ev.keyCode);
+		switch (ev.keyCode) {
+			case 38:
+			if (state == 1) {
+				return;
+			}
+			state = 0;	
+			break;			//up
+			case 40:
+			if (state == 0) {
+				return;
+			}			
+			state = 1;
+			break;			//down
+			case 37:
+			if (state == 3) {
+				return;
+			}			
+			state = 2;
+			break;			//left	
+			case 39:
+			if (state == 2) {
+				return;
+			}			
+			state = 3;
+			break;			//right	
+			default:
+			break;				
+		}
+	}
+
+
+
+</script>

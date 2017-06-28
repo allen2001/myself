@@ -1,0 +1,85 @@
+* {margin: 0; padding: 0}
+body {background: #fff; font-family: "Microsoft YaHei UI", Arial; font-size: 14px; color: #333;}
+ul {list-style: none}
+a {text-decoration: none}
+
+.clear {clear: both;}
+.inner {width: 1140px; margin: 0 auto}
+.banner {height: 660px; background-color: #ced7df;}
+.banner-grids {position: relative;}
+.banner-grids .nav {}
+.banner-grids .nav h2 {font-size: 4em; letter-spacing: 10px; font-weight: 400; color: #23232b; padding: 50px 0 20px 20px; transition: 1s all}
+.banner-grids .nav h2:hover {color: #4eacff; transition: 1s all;}
+.banner-grids .nav-list {padding-left: 15px;}
+.banner-grids .nav-list li {margin-bottom: 15px; height: 45px; line-height: 45px;}
+.banner-grids .nav-list a {color: #323b43; background-color: #fff; display: inline-block; font-size: 20px; font-weight: 600; transition: .5s all;}
+.banner-grids .nav-list a:hover {color:orange; transition: .5s all; text-decoration: none;}
+.nav-list li:nth-child(1) a {padding: 0 60px;}
+.nav-list li:nth-child(2) a {padding: 0 90px;}
+.nav-list li:nth-child(3) a {padding: 0 100px;}
+.nav-list li:nth-child(4) a {padding: 0 90px;}
+.nav-list li:nth-child(5) a {padding: 0 60px;}
+.banner-grids .scroll {}
+.banner .slide {width: 640px; height: 360px; transform-style: preserve-3d; perspective: 3000px; position: absolute; right: 0; top: 100px;}
+.banner .item {position:absolute; left:0; top:0; width:100%; height:100%; transition: transform 1s;}
+
+.about {background-color: #76b852; padding: 80px 0;}
+.about-info h3 {font-size: 44px; font-weight: 400; color: #323b43; text-align: center;}
+.about-info h4 {font-size: 17px; font-weight: 600; color: #d9ffc4; text-align: center; font-style: normal; margin: 20px 0 16px 0;}
+.about-info p {font-size: 14px; color: #fff; text-align: center; line-height: 25px; width: 70%; margin: 0 auto;}
+.about-grids {margin-top: 60px;}
+.about-grid {float: left; width: 50%;}
+.about-grid-in {padding: 0 15px;}
+.about-grid h4 {font-size: 24px; text-align: left; color: #d9ffc4; text-transform: uppercase;}
+.about-grid p {font-size: 14px; line-height: 25px; color: #fff; padding-top: 28px;}
+
+.my-skills {background-color: #323b43; padding: 80px 0;}
+.skill-info h3 {font-size: 44px; font-weight: 400; text-align: center; color: #ced7df;}
+.skill-grids {margin-top: 60px;}
+.skill-grid {float: left; width: 25%;}
+.skill-grid-in {padding: 0 15px; text-align: center;}
+.skill-grid-in .circle {}
+.skill-grid-in p {margin-top: 34px; font-size: 22px; color: #ced7df;}
+
+.portfolio {background-color: #ced7df; padding: 80px 0;}
+.portfolio h3 {font-size: 44px; font-weight: 400; text-align: center; color: #76b852;}
+.portfolio .thumbs {margin-top: 60px;}
+.portfolio .thumbs li {float: left; padding: 8px; background-color: #fff; margin: 5px;}
+.thumbs li a, .thumbs li a img {display: block; position: relative; width: 100%;}
+.thumbs li a {overflow: hidden;}
+.thumbs li a div {position: absolute; background-color: rgba(0,0,0,0.5); width: 100%; height: 100%; padding: 10px 20px; color: #fff;}
+.thumbs li a div h5 {font-size: 24px; text-align: center; margin-top: 10px;}
+.thumbs li a div p {line-height: 25px; text-indent: 1em;}
+
+.services {background-color: #59626a; padding: 80px 0;}
+.ser-head h3 {font-size: 44px; font-weight: 400; color: #76b852; text-align: center;}
+.ser-grids {margin-top: 50px; display: flex; flex-wrap: wrap}
+.ser-grid {width: 30%; text-align: center; margin: 1.5%;}
+.ser-grid-in {}
+.ser-grid .icon {width: 100px; height: 100px; background-color: #76b852; border-radius: 50%; margin: 0 auto; transition: all 1.5s;}
+.ser-grid .icon span {z-index: 9999; top: 27px; left: 0; font-size: 45px; color: #fff; transition: all 1.5s;}
+.ser-grid .icon:hover {background-color: #fff; transition: all 1.5s;}
+.ser-grid .icon:hover span {color: #76b852; transition: all 1.5s;}
+.ser-grid h3 {margin: 20px 0 16px 0; color: #ced7df; font-size: 20px;}
+.ser-grid p {margin: 7px 0; font-size: 14px; color: #fff; line-height: 25px;}
+
+.contact {background-color: #76b852; padding: 80px 0;}
+.contact-grids {}
+.contact-grid {width: 33.3%; float: left; text-align: center;}
+.contact-grid-in {padding: 0 15px;}
+.contact-grid .icon span {z-index: 9999; top: 0; left: 0; font-size: 37px; color: #323b43;}
+.contact-grid p {width: 60%; margin: 18px auto 0 auto; font-size: 14px; color: #fff; line-height: 25px;}
+.contact-grid p a {color: #fff;}
+.contact-info {margin-top: 60px;}
+.contact-info form {}
+.contact-info input[type = "text"], .contact-info textarea {background-color: #fff; border: none; outline: none; color: #c9c9c9; margin: 0 25px 23px 0; padding: 12px 10px;}
+.contact-info input[type = "text"] {width: 30%;}
+.contact-info textarea {margin-right: 0; width: 95%; resize: none; height: 225px;}
+.contact-info input[type = "submit"] {border: none; color: #fff; font-size: 16px; font-weight: 600; padding: 13px 43px; cursor: pointer; background-color: #323b43;}
+.contact-info input[type = "submit"]:hover {background-color: #ced7df; color: #323b43; transition: all .5s;}
+
+.footer {background-color: #323b43; padding: 17px 0;}
+.footer p {text-align: center; color: #ced7df; font-size: 14px; font-weight: 600; margin-bottom: 0;}
+.footer p a {color: #ced7df;}
+
+#toTop {position: fixed; right: 1%; bottom: 54px; z-index: 999; width: 32px; height: 32px; background: url("../images/arr.png") no-repeat 0 0; display: none;}

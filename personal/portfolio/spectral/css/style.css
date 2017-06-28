@@ -1,0 +1,101 @@
+* {margin: 0; padding: 0; box-sizing: border-box}
+html {}
+body {font-size: 14px; color: #fff;}
+a {text-decoration: none; color: #fff}
+ul {list-style: none}
+.pad_left_260 {padding-left: 260px;}
+
+.page-wraper {background-image: url("../images/banner1.jpg"); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;}
+.wraper-in {background-color: rgba(0,0,0,.5);}
+#myNav a {color: #fff;}
+.myNav {background-color: transparent; border: none;}
+.banner {height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center}
+.banner-in {width: 20%; text-align: center}
+.banner-in h2 {position: relative; animation: scale 0.5s; padding: 10px 30px; line-height: 1.75em; margin-bottom: 30px; font-size: 2.5em;}
+.banner-in h2:before, .banner-in h2:after {content: ""; display: block; height: 2px; animation: move 1s; animation-delay: 0.5s; animation-fill-mode: forwards; background-color: #fff; position: absolute;}
+.banner-in h2:before {top: 0; left: 0;}
+.banner-in h2:after {bottom: 0; right: 0;}
+.banner-in p {font-size: 1.2em; font-weight: normal; line-height: 1.6em; letter-spacing: 0.1em; margin-bottom: 30px; animation: opacity 1s; animation-delay: 1.5s; animation-fill-mode: forwards; opacity: 0;}
+.banner-in button {animation: opacity 1s; animation-delay: 1.5s; animation-fill-mode: forwards; opacity: 0;}
+.banner > a {display: none; position: absolute; bottom: 0; font-size: 1.2em; letter-spacing: 2px; text-align: center; cursor: pointer;}
+.banner > a:hover {text-decoration: none; color: #fff;}
+.banner > a i {display: block; margin-top: 10px; margin-bottom: 30px;}
+@keyframes move {
+    from {width: 0}
+    to {width: 100%}
+}
+@keyframes scale {
+    0% {transform: scale(0)}
+    100% {transform: scale(1)}
+}
+@keyframes opacity {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@media (max-width: 1150px) {
+    .banner-in h2 {padding: 5px 10px; font-size: 2em; line-height: 1.5em;}
+}
+@media (max-width: 800px) {
+    .banner-in h2 {padding: 3px 8px; font-size: 1.4em; line-height: 1.3em;}
+    .banner-in p {font-size: 1em; line-height: 1.2em}
+}
+@media (max-width: 600px) {
+    .banner-in h2:before, .banner-in h2:after {background-color: transparent;}
+}
+
+.style1 {background-color: #21b2a6; padding: 120px 0; text-align: center}
+.one-text {width: 50%; margin: 0 auto 70px auto;}
+.one-text h3 {letter-spacing: 3px; line-height: 40px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: solid 2px #1d9c91;}
+.one-text p {line-height: 32px; color: #afebe8; font-size: 18px;}
+.one-icons {text-align: center;}
+.one-icons > div {display: inline-block; margin: 0 20px;}
+.one-icons .con {display: inline-block; position: relative; width: 70px; height: 70px; border: solid 2px rgba(0,0,0,0.125); transform: rotate(-45deg);}
+.one-icons .con span {font-size: 35px; position: absolute; top: 15px; left: 0; bottom: 0; right: 15px; margin: auto; transform: rotate(45deg); display: block; color: #00ffcc;}
+
+.style2 {background-color: #2b343d; }
+.style2 img {width: 100%;}
+.style2 .row {display: flex}
+.two-text {padding-left: 45px; display: flex; flex-direction: column; justify-content: center; height: inherit;}
+.two-text.left {padding-left: 150px;}
+.two-text h3 {line-height: 40px; letter-spacing: 5px; font-weight: 800;}
+.two-text p {font-size: 1.3em; line-height: 33px;}
+
+.style3 {background-color: #505393; padding: 96px 0 64px 0;}
+.three-head {text-align: center; margin-bottom: 56px;}
+.three-head h3 {font-weight: 600; display: inline-block; margin: 0 0 30px 0; padding-bottom: 40px; border-bottom: solid 2px #464981; letter-spacing: 3px;}
+.three-head p {font-size: 1.2em; color: #d3d4e4; line-height: 32px;}
+.three-item {padding: 80px 120px 80px 50px;}
+.three1 {background-color: #4d508e}
+.three2 {background-color: #4a4d89}
+.three3 {background-color: #484a83}
+.three4 {background-color: #45477e}
+.three5 {background-color: #424479}
+.three6 {background-color: #3f4174}
+.three-item span {font-size: 1.5em; color: #00ffcc; float: left}
+.three-text {float: left; padding-left: 36px; width: 70%}
+.three-text h3 {margin: 0 0 40px 0; font-weight: 600; letter-spacing: 5px; font-size: 1.4em;}
+.three-text p {line-height: 32px; color: #d3d4e4; font-size: 1.2em;}
+
+.style4 {background-color: rgba(0,0,0,0.5); padding: 120px 0;}
+.four-text h3 {text-align: center; margin-top: 0; margin-bottom: 40px; letter-spacing: 5px; font-weight: 600;}
+.four-text p {line-height: 32px; color: #d3d4e4; font-size: 1.2em; padding-left: 21%; width: 75%}
+@media (max-width: 1200px) {
+    .four-text p {padding-left: 0; text-align: center; width: 100%}
+}
+@media (max-width: 992px) {
+    .four-btn button {margin-left: auto; margin-right: auto}
+}
+.four-btn button {display: block; margin-bottom: 30px; width: 270px; height: 50px; border-radius: 3px; text-align: center; line-height: 50px; font-size: 1.2em; border: none; outline: none;}
+.four-btn button:nth-child(1) {background-color: #ed4933;}
+.four-btn button:nth-child(2) {background-color: transparent; border: solid 2px #fff; margin-bottom: 0;}
+
+footer {background-color: #1f2327; padding: 60px 0; color: #8f9193;}
+footer i {color: #8f9193;}
+footer i:hover {color: #fff; transition: color 1s;}
+footer ul {text-align: center; margin-bottom: 60px;}
+footer ul li {display: inline-block; margin: 0 18px; font-size: 1.4em;}
+footer p {text-align: center; letter-spacing: 3px;}
+@media (max-width: 992px) {
+    footer {padding: 20px 0;}
+    footer ul {margin-bottom: 10px;}
+}

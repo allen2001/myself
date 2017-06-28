@@ -1,0 +1,69 @@
+.mar_bot_40 {margin-bottom: 40px;}
+.mar_top_50 {margin-top: 50px;}
+
+* {box-sizing: border-box}
+/*a:hover {text-decoration: none}*/
+
+.fillNav {height: 117px;}
+.myNav1 {background-color: #1f272d; min-height: 35px; border-color: #39434a; border-radius: 0; margin-bottom: 0;}
+.myNav1 .navbar-nav > li > a {padding-top: 5px; padding-bottom: 5px;}
+.myNav1 .navbar-collapse {padding: 0;}
+.myNav2 {background-color: #283036; padding: 10px 0; border-radius: 0; margin-bottom: 0;}
+.myNav2 .navbar-brand {height: auto; padding: 0; padding-left: 30px;}
+.bk {background: url("../images/bk.png") no-repeat center 0}
+
+.myBanner {padding: 60px 0 45px 0; background-color: #f04949;}
+.bannerText {margin-top: 70px; color: #fff; padding-left: 20px;}
+.bannerText h2 {font-size: 3em; margin-bottom: 30px;}
+
+.features {padding: 50px 0; text-align: center;}
+.features h3 {color: #f04949; font-size: 2em; margin-bottom: 30px;}
+.features .head p {text-indent: 1em; line-height: 1.8em; margin-bottom: 80px;}
+.portfolio-head {margin-bottom: 46px;}
+.features h4 {text-align: left;}
+.myTabNav {border-radius: 4px; border: solid 1px #f04949; display: inline-block}
+.features .myTabNav li {border-color: #f04949; margin-left: 0}
+.features .myTabNav li:nth-child(2) {border-left: solid 1px #f04949;}
+.features .myTabNav li:nth-child(3) {border-left: solid 1px #f04949;}
+.features .myTabNav li:nth-child(4) {border-left: solid 1px #f04949;}
+.features .myTabNav a {color: #696969;}
+.myTabNav .myAc {background-color: #f04949;}
+.myTabNav .myAc a {color: #fff;}
+.myTabNav .myAc a:hover {background-color: #f04949; color: #fff;}
+.portfolio-list {}
+.portfolio-list .myAc {background-color: #f04949; color: #fff;}
+.por-item {background-color: #ebebeb; border-radius: 4px; padding: 5px; color: #010101; margin-bottom: 10px;}
+.por-item .pic img {width: 100%; height: auto;}
+.por-item h5 {margin-top: 15px;}
+.welcome {text-align: center; color: #fff; background: url("../images/tc%20110.png") 0 0 fixed}
+.welcome-in {background-color: rgba(42,43,56,0.6); padding: 60px 0;}
+.welcome h3 {font-size: 3em; font-weight: 400;}
+.welcome p {margin-bottom: 30px;}
+.welcome button {border-color: #fff; color: #fff; background-color: transparent}
+.welcome button:hover {color: #fff;}
+.myNews {padding: 70px 0;}
+.myNews h4 {margin-top: 10px;}
+.news-head {margin-bottom: 60px;}
+.news-head h4 {color: #f04949;}
+.news-title {margin-bottom: 30px;}
+
+.myNews .media-left a {position: relative; display: block;}
+.myNews .media-left .red_line {height: 7px; width: 146px; background-color: #f04949; position: absolute; left: 0; top: 0;}
+.myNews .media-left .date_icon {position: absolute; left: 14px; top: 7px;}
+.myNews .panel-group .panel + .panel {margin-top: 15px;}
+.myNews  .ser-ac {background-color: #f04949; color: #fff;}
+.myNews .panel-title {font-size: 14px;}
+.myNews .panel-heading {}
+.myNews .panel-heading h4 {margin: 0;}
+
+.team {background-color: #f04949; padding: 30px 0;}
+.team .carousel-indicators {right: 0; text-align: right; top: 0; left: auto; margin-left: auto; display: inline-block; width: auto; bottom: auto}
+.team .carousel-caption {bottom: auto; top: 0; left: auto; right: 0; padding-top: 0; position: relative; text-align: center}
+.team .carousel-caption h3 {margin-bottom: 25px;}
+.team .carousel-caption p {margin-bottom: 45px; width: 80%; margin-left: auto; margin-right: auto;}
+.team .pic-list .pic {text-align: center;}
+.team .pic-list .pic img {width: 212px; margin: 0 auto; border-radius: 50%;}
+.team .pic-list p {margin: 25px 0; width: 100%; font-size: 20px;}
+
+footer {background-color: #283036; padding: 80px 0; text-align: center; color: #fff;}
+.toTop {width: 40px; height: 40px; border-radius: 50%; background-color: #f04949; line-height: 40px; position: fixed; right: 5vh; bottom: 10vh; text-align: center; font-size: 20px; border: solid 1px #fff; cursor: pointer}
