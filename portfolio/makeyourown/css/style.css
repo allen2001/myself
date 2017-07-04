@@ -1,0 +1,105 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html {font-size: 100px;}
+body {font-size: 0.14rem; background-color: #f9f9f9; font-family: 'Dosis', sans-serif; color: #333;}
+h1, h2, h3, h4, h5 {font-weight: bold;}
+a {text-decoration: none}
+a:hover {text-decoration: none}
+ul {list-style: none}
+
+.preloader {position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; background-color: #fff; display: flex; justify-content: center; align-items: center;}
+.sk-spinner {background-color: #a4c639; width: 0.3rem; height: 0.3rem;}
+.myHeader {}
+.myNav {background-color: #fff; border: none; opacity: 0;}
+
+.header-logo {height: 0.68rem;}
+@media (max-width: 992px) {
+    .header-logo {height: auto; width: 2.5rem;}
+}
+.navbar-default .navbar-nav li a {line-height: 0.38rem; color: #202020; font-weight: 700; padding-left: 0.2rem; padding-right: 0.2rem;}
+.navbar-default .navbar-nav li.ac a {color: #a4c639}
+.navbar-default .navbar-nav li a:hover {color: #a4c639}
+
+.home {padding: 1.8rem 0; text-align: center; background-image: url("../images/home-bg.jpg"); background-size: cover; color: #fff;}
+.home-logo {font-size: 0.64rem; color: #9C0; font-weight: bold}
+.home-text {font-size: 0.48rem;}
+.home .myBtn {padding: 0.2rem; border-radius: 0; transition: 1s all; display: inline-block; font-weight: bold; font-size: 0.16rem; height: 0.6rem; margin-top: 0.6rem;}
+.home .myBtn:hover {background-color: #9C0; transition: 1s all;}
+
+.tm-icons {}
+.tm-icons .green {color: #a5c639;}
+.tm-icons a {display: block; padding: 0.24rem; border: solid 2px #a5c639; border-radius: 50%; color: #202020; font-size: 0.24rem;}
+.tm-icons .tm-icon-1, .tm-icons .tm-icon-2, .tm-icons .tm-icon-3 {transition: all 1s; padding: 0.6rem 0.15rem; background-color: #fff; margin-top: -0.4rem; border-left: 1px solid #f9f9f9; box-shadow: 0 2px 8px 0 rgba(50,50,50,0.1); margin-bottom: 0.2rem;}
+@media (max-width: 992px) {
+    .tm-icons .tm-icon-1, .tm-icons .tm-icon-2, .tm-icons .tm-icon-3 {margin: 0.15rem; border-left: 4px solid #a4c639;}
+}
+.tm-icons .tm-icon-1 {border-left: 4px solid #a4c639;}
+.tm-icons .tm-icon-1:hover {background-color: #9C9; transition: all 1s;}
+.tm-icons .tm-icon-2:hover {background-color: #9CF; transition: all 1s;}
+.tm-icons .tm-icon-3:hover {background-color: #CC9; transition: all 1s;}
+
+.about {padding: 80px 0;}
+.about .row {display: flex; justify-content: center}
+@media (max-width: 992px) {
+    .about .row {display: block;}
+}
+.about img {margin-bottom: 0.16rem;}
+.about .right {display: flex; align-items: center;}
+.about .text {background-color: #fff; border-right: solid 4px #a6c53b; box-shadow: 0 2px 8px 0 rgba(50,50,50,0.1); padding: 0.6rem;}
+.about .text h2, .about .text h3 {font-weight: bold;}
+.about-bottom {position: relative; top: 1.4rem; background-color: #fff; padding: 0.4rem 0.2rem; border-left: 4px solid #a4c639; box-shadow: 0 2px 8px 0 rgba(50,50,50,0.1);}
+.about-bottom-des {display: flex; align-items: center}
+@media (max-width: 992px) {
+    .about-bottom-des {display: block;}
+    .about-skill {padding-top: 0.4rem;}
+}
+.about-bottom h2 {padding-bottom: 0.3rem;}
+.about-bottom .progress {height: 5px;}
+.about-bottom .progress-des {color: #202020; margin-bottom: 5px; font-weight: bold}
+.about-bottom .progress-des strong {font-size: 0.16rem;}
+
+.service {padding: 1.4rem 0 0.6rem 0; background-color: #fff; text-align: center;}
+.service h2 {padding-bottom: 0.3rem;}
+.service .service-con {padding: 0.4rem 0;}
+.service .service-con p {font-size: 0.24rem; font-weight: bold;}
+.service .service-icon {margin-bottom: 0.2rem; border-radius: 50%; width: 0.8rem; height: 0.8rem; font-size: 0.3rem; line-height: 0.8rem; text-align: center; border-left: solid 2px #202020; border-right: 2px solid #a4c639; color: #333;}
+.border_right_s {border-right: solid 1px #f9f9f9;}
+.border_bottom_s {border-bottom: solid 1px #f9f9f9;}
+
+.team {}
+.team .team-title {height: 3rem; display: flex; align-items: center; justify-content: center; background-image: url("../images/team-title-bg.jpg"); background-position: center;}
+.team .media {margin-bottom: 0.5rem; background-color: #fff; box-shadow: 0 2px 8px 0 rgba(50,50,50,0.1); position: relative; bottom: 0.4rem;}
+.team .media .media-body {padding: 0.4rem 0.3rem; border-right: solid 4px #a6c63f;}
+.team .media .media-body h4 {color: #a4c639;}
+
+.portfolio {padding: 0.8rem 0; background-color: #fff; text-align: center;}
+.portfolio .title {padding-bottom: 0.3rem; font-size: 0.4rem;}
+.iso-section {}
+.iso-section .filter-wrapper {text-align: center; margin-bottom: 0.24rem;}
+.iso-section .filter-wrapper li {display: inline-block; margin: 4px;}
+.iso-section .filter-wrapper li a {display: block; padding: 0.08rem 0.17rem; color: #999; font-size: 0.18rem; font-weight: bold;}
+.iso-section .filter-wrapper li a.selected, .iso-section .filter-wrapper li a:hover {color: #a4c639; text-decoration: none;}
+.iso-section .iso-box {margin-bottom: 0.2rem;}
+
+.price {padding-top: 0.8rem;}
+.price .title {text-align: center; padding-bottom: 0.3rem; font-size: 0.4rem;}
+.price .price-con {background-color: #fff; padding: 0.4rem 0.25rem 0.4rem 0.6rem; position: relative; top: 0.3rem;}
+.price .price-con h3 {border-bottom: solid 2px #202020; padding-bottom: 0.2rem;}
+.price .price-con ul {}
+.price .price-con ul li {padding: 0.2rem 0;}
+.price .price-con .btn {border-radius: 0; width: 1.4rem; height: 0.5rem; text-align: center; background-color: #a2c73b; font-size: 0.18rem; color: #f7fcff; border: none;}
+
+.contact {padding-top: 1rem; background-image: url("../images/contact-bg.jpg"); background-position: center; background-size: cover;}
+.contact .title {padding-bottom: 0.5rem;}
+.contact .contact-con {background-color: #fff; border-left: solid 4px #a4c739; padding: 0.7rem 0.4rem 1.2rem 0.4rem; position: relative; top: 0.25rem;}
+.contact form {margin-top: 0.65rem;}
+.contact form input {border: none; outline: none; background-color: #fff; border-left: solid 4px #a2c837; height: 0.5rem; line-height: 0.5rem; padding: 0.1rem; margin-bottom: 0.2rem; width: 100%;}
+.contact form textarea {padding: 0.1rem; width: 100%; border-right: solid 4px #a2c837; margin-bottom: 0.2rem;}
+.contact form button {width: 3.45rem; height: 0.6rem; line-height: 0.6rem; text-align: center; background-color: #a4c739; border-radius: 0.3rem; background-color: #a4c739; color: #fff; font-size: 0.2rem; font-weight: bold; border: none; outline: none;}
+
+footer {padding: 0.8rem 0;}
+footer p {text-align: center; margin-bottom: 0.2rem;}
+footer p span {height: 1px; width: 0.8rem; background-color: #eee; display: inline-block}
+footer .icon {text-align: center;}
+footer .icon li {display: inline-block; text-align: center;}
+footer .icon li a {color: #808080; width: 0.4rem; height: 0.4rem; line-height: 0.4rem; background-color: #fff; border-radius: 50%; transition: all 1s;}
+footer .icon li a:hover {transition: all 1s; background-color: #a4c739; color: #fff;}

@@ -38,11 +38,11 @@ window.onload = function () {
         ctx.arc(x, y, r, start, end);
         ctx.stroke();
 
-        ctx.font = "44px arial";
+        ctx.font = "35px arial";
         ctx.fillStyle = "#fff";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle"
-        var text = rate * 10 + "%";
+        var text = rate * 100 + "%";
         ctx.fillText(text, x, y)
     }
 }

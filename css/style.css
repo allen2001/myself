@@ -5,10 +5,10 @@ a {text-decoration: none}
 
 .clear {clear: both;}
 .inner {width: 1140px; margin: 0 auto}
-.banner {height: 660px; background-color: #ced7df;}
+.banner {padding-bottom: 110px; padding-top: 50px; background-color: #ced7df;}
 .banner-grids {position: relative;}
-.banner-grids .nav {}
-.banner-grids .nav h2 {font-size: 4em; letter-spacing: 10px; font-weight: 400; color: #23232b; padding: 50px 0 20px 20px; transition: 1s all}
+.banner-grids .nav {margin-bottom: 20px;}
+.banner-grids .nav h2 {font-size: 4em; letter-spacing: 10px; font-weight: 400; color: #23232b; padding: 0 0 20px 20px; transition: 1s all}
 .banner-grids .nav h2:hover {color: #4eacff; transition: 1s all;}
 .banner-grids .nav-list {padding-left: 15px;}
 .banner-grids .nav-list li {margin-bottom: 15px; height: 45px; line-height: 45px;}
@@ -20,9 +20,14 @@ a {text-decoration: none}
 .nav-list li:nth-child(4) a {padding: 0 90px;}
 .nav-list li:nth-child(5) a {padding: 0 60px;}
 .banner-grids .scroll {}
-.banner .slide {width: 640px; height: 360px; transform-style: preserve-3d; perspective: 3000px; position: absolute; right: 0; top: 100px;}
+.banner .slide {width: 480px; height: 270px; transform-style: preserve-3d; perspective: 3000px; position: relative; top: 80px;}
 .banner .item {position:absolute; left:0; top:0; width:100%; height:100%; transition: transform 1s;}
-
+@media (max-width: 1200px) {
+    .banner .slide {top: 0;}
+}
+@media (max-width: 530px) {
+    .banner .slide {display: none;}
+}
 .about {background-color: #76b852; padding: 80px 0;}
 .about-info h3 {font-size: 44px; font-weight: 400; color: #323b43; text-align: center;}
 .about-info h4 {font-size: 17px; font-weight: 600; color: #d9ffc4; text-align: center; font-style: normal; margin: 20px 0 16px 0;}
@@ -36,10 +41,14 @@ a {text-decoration: none}
 .my-skills {background-color: #323b43; padding: 80px 0;}
 .skill-info h3 {font-size: 44px; font-weight: 400; text-align: center; color: #ced7df;}
 .skill-grids {margin-top: 60px;}
-.skill-grid {float: left; width: 25%;}
-.skill-grid-in {padding: 0 15px; text-align: center;}
+
+.skill-grid-in {text-align: center;}
 .skill-grid-in .circle {}
 .skill-grid-in p {margin-top: 34px; font-size: 22px; color: #ced7df;}
+@media (max-width: 992px) {
+    .skill-grid-in {margin-bottom: 30px;}
+    .skill-grid-in p {margin-top: 15px;}
+}
 
 .portfolio {background-color: #ced7df; padding: 80px 0;}
 .portfolio h3 {font-size: 44px; font-weight: 400; text-align: center; color: #76b852;}

@@ -5,7 +5,7 @@ $(function () {
     var slide = $(".slide");
     for (var i = 0; i < 4; i++) {
         var deg = i * 90;
-        $("<div class='item'></div>").css({"background-image": "url(images/" + i + ".jpg)", "background-size": "cover", "transform": "rotateX(" + deg +"deg) translateZ(180px)"}).appendTo(slide);
+        $("<div class='item'></div>").css({"background-image": "url(images/" + i + ".jpg)", "background-size": "100% 100%", "transform": "rotateX(" + deg +"deg) translateZ(135px)"}).appendTo(slide);
     }
 
     //0 90 180 270
@@ -26,7 +26,7 @@ $(function () {
         num++;
         $(".slide .item").each(function(index, element) {
             var newDeg = index * 90 - num * 90;
-            $(this).css({"transform": "rotateX(" + newDeg + "deg) translateZ(180px)"});
+            $(this).css({"transform": "rotateX(" + newDeg + "deg) translateZ(135px)"});
         });
     }
 });
