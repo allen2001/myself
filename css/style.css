@@ -31,12 +31,11 @@ a {text-decoration: none}
 .about {background-color: #76b852; padding: 80px 0;}
 .about-info h3 {font-size: 44px; font-weight: 400; color: #323b43; text-align: center;}
 .about-info h4 {font-size: 17px; font-weight: 600; color: #d9ffc4; text-align: center; font-style: normal; margin: 20px 0 16px 0;}
-.about-info p {font-size: 14px; color: #fff; text-align: center; line-height: 25px; width: 70%; margin: 0 auto;}
+.about-info p {font-size: 14px; color: #fff; text-align: center; line-height: 25px; width: 70%; margin: 0 auto; text-indent: 2em;}
 .about-grids {margin-top: 60px;}
-.about-grid {float: left; width: 50%;}
-.about-grid-in {padding: 0 15px;}
+.about-grid {margin-bottom: 20px;}
 .about-grid h4 {font-size: 24px; text-align: left; color: #d9ffc4; text-transform: uppercase;}
-.about-grid p {font-size: 14px; line-height: 25px; color: #fff; padding-top: 28px;}
+.about-grid p {font-size: 14px; line-height: 25px; color: #fff; padding-top: 28px; text-indent: 2em;}
 
 .my-skills {background-color: #323b43; padding: 80px 0;}
 .skill-info h3 {font-size: 44px; font-weight: 400; text-align: center; color: #ced7df;}
