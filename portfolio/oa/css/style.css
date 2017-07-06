@@ -1,0 +1,18 @@
+
+
+footer {padding: 10px 0;}
+.clearBorder {border: none}
+.myFont {font-weight: normal; font-style: normal;}
+.nav .img_wrap {padding: 0; margin-top: 3px;}
+.touxiang {width: 40px; height: 40px;}
+
+.tag {margin-bottom: 20px;}
+.blue {color: #347ab8;}
+
+.img_64 {width: 64px;}
+.mar_top_0 {margin-top: 0;}
+.mar_top_10 {margin-top: 10px;}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {vertical-align: middle}
+
+.my-form {padding: 10px; border: solid 1px #ccc; border-top: none;}

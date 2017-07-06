@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1</title>
+    <link rel="stylesheet" href="libs/bootstrap.css">
+    <link rel="stylesheet" href="libs/font-awesome.css">
+    <style>
+        form {padding: 30px 0;}
+        li span {font-family: "FontAwesome"; font-size: 20px;}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <span class="h1">1</span>
+    <span class="h2">2</span>
+    <span class="h3">3</span>
+    <span class="h4">4</span>
+    <span class="h5">5</span>
+    <span class="h6">6</span>
+    <p class="lead">Vivamus sagittis lacus <mark>vel</mark> augue laoreet rutrum <del>faucibus dolor auctor.</del> Duis mollis, est non commodo luctus.</p>
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer>hello end</footer>
+    </blockquote>
+
+    <ul class="list-unstyled list-inline">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li><span class="fa-window-close"></span></li>
+        <li><span class="fa-window-close"></span></li>
+        <li><span class="fa-window-close"></span></li>
+        <li><span class="fa-window-close"></span></li>
+    </ul>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <form>
+            <div class="form-group">
+                <label for="user">user</label>
+                <input type="text" id="user" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="pass">password</label>
+                <input type="text" id="pass" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="file">File input</label>
+                <input type="file" id="file">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="user2">user</label>
+                <input type="text" id="user2" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="pass2">password</label>
+                <input type="text" id="pass2" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="user3" class="col-sm-2 control-label">user</label>
+                <div class="col-sm-10"><input type="text" id="user3" class="form-control"></div>
+
+            </div>
+            <div class="form-group">
+                <label for="pass3" class="col-sm-2 control-label">password</label>
+                <input type="text" id="pass3" class="form-control">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">Check me out
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <div class="form-group has-error has-feedback">
+            <label class="control-label" for="inputError2">Input with error</label>
+            <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+            <span id="inputError2Status" class="sr-only">(error)</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
