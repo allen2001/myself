@@ -16,7 +16,11 @@ function getPlayList2(id, callback) {
 }
 
 getPlayList2(parmse.id, function (data) {
-	console.log(data);
+	//console.log(data);
+	$("#detailPrev").css({
+		"background-image": "url(" + data.creator.backgroundUrl + ")",
+		"background-size": "cover"
+	});
 	$("#detailPrev").find(".pic p").html(data.playCount);
 	$("#detailPrev").find(".pic img").attr("src", data.coverImgUrl);
 	$("#detailPrev").find(".text").html(data.name);
@@ -40,6 +44,7 @@ getPlayList2(parmse.id, function (data) {
 			$item2.find("span").removeClass().addClass("no");
 		}
 
+		// 添加收藏歌曲功能
 		$item2.find("span").data("music", music).click(function (ev) {
 			ev.stopPropagation();	//阻止事件冒泡
 			//console.log($(this).data("music").id);
@@ -107,5 +112,6 @@ function isCollected(id) {
 
 //返回首页
 $("#detailPrev").find(".back").click(function () {
+	console.info("test");
 	router("tab");
 });
