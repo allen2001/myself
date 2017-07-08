@@ -2,7 +2,7 @@ function getPlayList(limit, url, callback) {
 
 	//如果有对应缓存数据则直接使用
 	if (isCheck()) {
-		console.log("请求的是缓存")
+		console.log("请求的是首页推荐歌单缓存")
 		var cacheData = JSON.parse(localStorage.list);
 		callback(cacheData);
 		return;

@@ -4,8 +4,8 @@
 
 		//如果有对应缓存数据则直接使用
 		if (isCheck()) {
-			console.log("请求的是缓存")
-			var cacheData = JSON.parse(localStorage.list);
+			console.log("请求的是歌单缓存")
+			var cacheData = JSON.parse(localStorage.list2);
 			callback(cacheData);
 			return;
 		}
@@ -18,21 +18,22 @@
 				console.log("请求的是服务器");
 				//console.log(data);
 				//console.log(JSON.stringify(data.playlists))
-				localStorage.cacheTime = new Date().getTime();
+				localStorage.cacheTime2 = new Date().getTime();
 				var list = JSON.stringify(data.playlists);
-				localStorage.list = list;
+				localStorage.list2 = list;
+
 				callback(data.playlists);
 			}
 		});
 
 		//检查是否有缓存数据
 		function isCheck() {
-			if (!localStorage.list) {
+			if (!localStorage.list2) {
 				return false;
 			}
 
 			//
-			if (new Date().getTime() - localStorage.cacheTime >= 10 * 60 * 1000) {
+			if (new Date().getTime() - localStorage.cacheTime2 >= 10 * 60 * 1000) {
 				return false;
 			}
 
@@ -42,7 +43,7 @@
 
 	//
 	var songListUrl = "data/data.json";
-	
+
 	getPlayList(8, songListUrl, function (data) {
 		console.log("歌单页面");
 		console.info(data);
