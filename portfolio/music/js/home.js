@@ -40,10 +40,9 @@ function getPlayList(limit, url, callback) {
 
 // var server = "http://musicapi.duapp.com/api.php";
 var server = "data/topPlayList.json";
-var songListUrl = "data/data.json"
 
 getPlayList(15, server, function (data) {
-	console.log("ok")
+	console.log("首页页面")
 	//console.log(data);
 	var $template = $("#templateItem").html();
 	//console.log($template);
