@@ -3,7 +3,8 @@ var parmse = getParUrl();
 
 function getPlayList2(id, callback) {
 	$.ajax({
-		url: "https://api.imjad.cn/cloudmusic/?type=playlist&id="+id,				//"https://api.imjad.cn/cloudmusic/?type=playlist&id="+id
+		// url: "https://api.imjad.cn/cloudmusic/?type=playlist&id="+id,
+		url: "data/playlist.json",
 		type: "GET",
 		success: function (data) {
 			// console.log("请求的是服务器");
@@ -11,7 +12,7 @@ function getPlayList2(id, callback) {
 			//console.log(JSON.stringify(data.playlists))
 			callback(data.playlist)
 		}
-	});
+	});	
 }
 
 getPlayList2(parmse.id, function (data) {

@@ -1,4 +1,4 @@
-getPlayList(8, server, function (data) {
+getPlayList(8, songListUrl, function (data) {
 	console.log("ok");
 	console.info(data);
 	//console.log(data);

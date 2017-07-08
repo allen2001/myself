@@ -9,7 +9,8 @@ function getPlayList(limit, url, callback) {
 	}
 
 	$.ajax({
-		url: url + "?type=topPlayList&cat=%E5%85%A8%E9%83%A8&offset=0&limit=" + limit,
+		// url: url + "?type=topPlayList&cat=%E5%85%A8%E9%83%A8&offset=0&limit=" + limit,
+		url: url,
 		type: "GET",
 		success: function (data) {
 			console.log("请求的是服务器");
@@ -37,7 +38,9 @@ function getPlayList(limit, url, callback) {
 	}
 }
 
-var server = "http://musicapi.duapp.com/api.php";
+// var server = "http://musicapi.duapp.com/api.php";
+var server = "data/topPlayList.json";
+var songListUrl = "data/data.json"
 
 getPlayList(15, server, function (data) {
 	console.log("ok")
