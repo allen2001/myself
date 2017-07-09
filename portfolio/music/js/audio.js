@@ -1,13 +1,19 @@
 var musicControler = {
 	//
-	server: "http://musicapi.duapp.com/api.php",
+	// server: "http://musicapi.duapp.com/api.php",
+	server: "data/playlist.json", 
 	//
 	playCollected: function (id) {
 		$("#global").css("display", "flex");
 		$("#audio_state").html("loading...");
-		console.info(id)
+		console.info(id);
+
+		var list = JSON.parse(localStorage.collection);
+		$("#audio_name").html(list[id].name);
+		$("#audioPic").attr("src", list[id].picUrl);
+
 		$.ajax({
-			url: this.server + "?type=url&id=" + id,
+			url: "http://musicapi.duapp.com/api.php?type=url&id=" + id,
 			type: "get",
 			success: function (data) {
 				console.info(data);
@@ -37,17 +43,21 @@ var musicControler = {
 	play: function (music) {
 		$("#global").css("display", "flex");
 		$("#audio_state").html("loading...");
+
+		$("#audio_name").html(music.name);
+		$("#audioPic").attr("src", music.al.picUrl);
+		
 		$.ajax({
-			url: this.server + "?type=url&id=" + music.id,
+			url: "http://musicapi.duapp.com/api.php?type=url&id=" + id,
 			type: "get",
 			success: function (data) {
 				console.log(data);
 				var oAudio = $("#audio").get(0);
-				oAudio.src = data.data[0].url;				//data.data[0].url
+				oAudio.src = data.data[0].url;				// data.data[0].url
 				oAudio.play();
-				$("#audio_name").html(music.name);
+				// $("#audio_name").html(music.name);
 				$("#audio_state").html(music.ar[0].name);
-				$("#audioPic").attr("src", music.al.picUrl)
+				// $("#audioPic").attr("src", music.al.picUrl);
 
 				$("#audioBtn").addClass("play");
 				$("#audioBtn").off('click').click(function () {
