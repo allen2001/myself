@@ -48,7 +48,7 @@ var musicControler = {
 		$("#audioPic").attr("src", music.al.picUrl);
 		
 		$.ajax({
-			url: "http://musicapi.duapp.com/api.php?type=url&id=" + id,
+			url: "http://musicapi.duapp.com/api.php?type=url&id=" + music.id,
 			type: "get",
 			success: function (data) {
 				console.log(data);
